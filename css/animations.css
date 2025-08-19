@@ -1,0 +1,231 @@
+.robot-eye-right {
+  animation: 2s righteye infinite;
+}
+
+.robot-eye-left {
+  animation: 4s lefteye cubic-bezier(0.54, 1, 0.53, 0.02) infinite;
+}
+
+.robot-hair-style {
+  animation: 2.3s hairstyle cubic-bezier(0.82, 1.18, 0.93, -0.13) infinite;
+}
+
+.robot-teeth {
+  animation: 2.5s allteeth cubic-bezier(0, 1.5, 1, 1.5) infinite;
+}
+
+.robot-eye-right .eye-line {
+  animation: r-eyeline 5s linear infinite;
+  motion-path: path(
+    "M18.45,58.46s52.87-70.07,101.25-.75,101.75-6.23,101.75-6.23S246.38,5.59,165.33,9.08s-15,71.57-94.51,74.56S18.45,58.46,18.45,58.46Z"
+  );
+  offset-path: path(
+    "M18.45,58.46s52.87-70.07,101.25-.75,101.75-6.23,101.75-6.23S246.38,5.59,165.33,9.08s-15,71.57-94.51,74.56S18.45,58.46,18.45,58.46Z"
+  );
+}
+
+.robot-tooth {
+  animation: teefies 0.5s linear infinite;
+}
+
+.robot-nose {
+  animation: nosey 3s cubic-bezier(0.08, 0.86, 0.96, 0.24) infinite;
+}
+
+.robot-nose:hover {
+  animation: rotate-nose 1s cubic-bezier(0.03, 0.99, 0.92, 0.07);
+}
+
+.robot-ear-left {
+  animation: r-ear-left 1s cubic-bezier(0.19, 0.22, 0.1, 0.97) infinite;
+}
+
+.robot-ear-right {
+  animation: r-ear-right 1.5s cubic-bezier(0.19, 0.22, 0.17, 1.62) infinite;
+}
+
+.robot-hair-one {
+  animation: shrinky2 0.3s ease-in alternate infinite;
+}
+
+.robot-hair-one:nth-of-type(1) {
+  animation: shrinky1 0.5s ease-in alternate infinite;
+}
+
+.robot-hair-two {
+  animation: shrinky1 1s ease-in alternate infinite;
+}
+
+.robot-hair-two:nth-of-type(2) {
+  animation: shrinky3 2.5s ease-in alternate infinite;
+}
+
+.robot-hair-three {
+  animation: middlehair 1.87s cubic-bezier(0.12, 0.58, 0.97, -0.8) infinite;
+}
+
+@keyframes rotate-nose {
+  60% {
+    transform: rotate(95deg);
+    box-shadow: inset 18px -20px 100px #6b6b6b;
+  }
+  90% {
+    transform: rotate(360deg) scale(55%); /* the oooold spinnin' nose routine */
+  }
+}
+
+@keyframes middlehair {
+  80% {
+    clip-path: polygon(50% 50%, 50% 50%, 50% 5%, 50% 50%, 50% 50%, 50% 50%);
+  }
+}
+
+@keyframes shrinky1 {
+  0% {
+    clip-path: polygon(0 0, 30% 0, 100% 100%, 54% 100%);
+  }
+
+  45% {
+    clip-path: polygon(0 0, -73% 0, 100% 100%, 54% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 30% 0, 100% 100%, 54% 100%);
+  }
+}
+
+@keyframes shrinky2 {
+  0% {
+    clip-path: polygon(0 0, 30% 0, 100% 100%, 54% 100%);
+  }
+
+  45% {
+    clip-path: polygon(0 0, 73% 0, 100% 100%, 22% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 30% 0, 100% 100%, 54% 100%);
+  }
+}
+
+@keyframes shrinky3 {
+  0% {
+    clip-path: polygon(0 0, 30% 0, 100% 100%, 54% 100%);
+    transform: translate(0, 0);
+  }
+
+  45% {
+    clip-path: polygon(0 0, 200% 0, 100% 100%, -22% 100%);
+    transform: translate(0, -40px);
+  }
+  100% {
+    clip-path: polygon(0 0, 30% 0, 100% 100%, 54% 100%);
+  }
+}
+
+@keyframes r-ear-right {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(25%);
+  }
+}
+
+@keyframes r-ear-left {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 0;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background: rgb(60, 180, 114);
+  }
+  50% {
+    transform: translate(20px, 0px);
+    opacity: 0.5;
+    clip-path: polygon(50% 0%, 75% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+  }
+  75% {
+    opacity: 0.75;
+    background: rgb(215, 249, 137);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes nosey {
+  0% {
+    box-shadow: inset 18px -20px 15px #6b6b6b;
+  }
+  50% {
+    box-shadow: inset 18px -118px 15px #b01616;
+  }
+  100% {
+    box-shadow: inset 18px -20px 15px #6b6b6b;
+  }
+}
+
+@keyframes r-eyeline {
+  100% {
+    motion-offset: 100%;
+    offset-distance: 100%;
+  }
+}
+
+@keyframes teefies {
+  0% {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  50% {
+    clip-path: polygon(37% 0%, 68% 50%, 50% 100%, 0% 50%);
+  }
+}
+
+@keyframes righteye {
+  0% {
+    clip-path: ellipse(36% 50% at 50% 50%);
+  }
+  50% {
+    clip-path: ellipse(6% 50% at 50% 50%);
+  }
+}
+
+@keyframes lefteye {
+  0% {
+    transform: rotate(0deg) scale(50%);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg) scale(50%);
+  }
+}
+
+@keyframes hairstyle {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes allteeth {
+  0% {
+    clip-path: ellipse(50% 20% at 50% 50%);
+  }
+  50% {
+    clip-path: ellipse(19% 13% at 50% 50%);
+  }
+  100% {
+    clip-path: ellipse(50% 20% at 50% 50%);
+  }
+}

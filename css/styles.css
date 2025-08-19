@@ -1,41 +1,303 @@
 body {
   background-color: #21222c;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-/* 👇👇👇 Paste the styles of your Fancy Robot from the "Position it right" assignment here 👇👇👇 */
-
 .robot-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .robot-face-shape {
+  position: relative;
+  width: 50rem;
+  height: 50rem;
+  margin: 20px 0;
+  background: linear-gradient(
+    181deg,
+    rgba(230, 230, 230, 1) 0%,
+    rgb(68 68 68) 48%,
+    rgba(235, 235, 235, 1) 100%
+  );
+  border-radius: 50% / 10%;
+  color: white;
+  text-align: center;
+  text-indent: 0.1em;
+  border: 3px grey dotted;
 }
 
 .robot-eye-left {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  width: 20rem;
+  height: 20rem;
+  background: radial-gradient(
+    circle,
+    rgb(251, 163, 63) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border-radius: 100%;
+  border: rgb(142 85 85 / 52%) solid 21px;
+  box-shadow: inset 10px -3px 16px #c53232;
+}
+
+.robot-eye-left .eye-line {
+  background: rgba(255, 0, 0, 0.461);
+  height: 1rem;
+  width: 15rem;
+  position: relative;
+  top: 10rem;
+  left: 3rem;
+  z-index: 100;
+  transform: rotate(15deg);
 }
 
 .robot-eye-right {
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  width: 38%;
+  height: 42%;
+  background: radial-gradient(
+    circle,
+    rgb(251, 166, 63) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border-radius: 100%;
+  clip-path: ellipse(36% 50% at 50% 50%);
+  transform: rotate(90deg);
+  box-shadow: inset 20px 20px 17px #a80505;
+}
+
+.robot-eye-right .eye-line {
+  background: rgba(255, 0, 0, 0.461);
+  height: 5rem;
+  width: 5rem;
+  position: relative;
+  top: 8rem;
+  left: 7rem;
+  z-index: 100;
+  transform: rotate(-105deg);
 }
 
 .robot-ear-left {
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  background: rgb(60, 180, 114);
+  background-position: 61px 0px;
+  top: 17rem;
+  left: -16rem;
+  z-index: -1;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  opacity: 0.35;
 }
 
 .robot-ear-right {
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  background: url(https://picsum.photos/id/56/500/500);
+  background-position: -212px 0px;
+  top: 17rem;
+  right: -16rem;
+  z-index: -1;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
 
 .robot-nose {
-}
-
-.robot-nose:before {
-}
-
-.robot-nose:after {
+  position: absolute;
+  top: 20rem;
+  left: 21.5rem;
+  background: linear-gradient(
+    87deg,
+    rgb(123 232 247) 0%,
+    rgb(37 37 37) 50%,
+    rgb(34 85 92) 100%
+  );
+  width: 10rem;
+  height: 10rem;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  box-shadow: inset 18px -20px 15px #6b6b6b;
 }
 
 .robot-teeth {
+  position: absolute;
+  top: 29rem;
+  width: 25rem;
+  height: 23rem;
+  background: url(https://picsum.photos/id/102/500/500);
+  left: 12.5rem;
+  clip-path: ellipse(50% 20% at 50% 50%);
+  box-shadow: 20px 1px 30px 20px #ed9705 inset,
+    -20px 0px 30px 20px #eda705 inset;
 }
 
 .robot-tooth {
+  position: absolute;
+  background: linear-gradient(
+    133deg,
+    rgba(255, 255, 255, 1) 50%,
+    rgb(147 147 147) 100%
+  );
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.robot-tooth:nth-of-type(1) {
+  top: 6rem;
+  left: 0rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-tooth:nth-of-type(2) {
+  top: 5rem;
+  left: 4.2rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-tooth:nth-of-type(3) {
+  top: 4.5rem;
+  left: 8.4rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-tooth:nth-of-type(4) {
+  top: 4.5rem;
+  left: 12.6rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-tooth:nth-of-type(5) {
+  top: 5rem;
+  left: 16.8rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-tooth:nth-of-type(6) {
+  top: 6rem;
+  left: 21rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-tooth:nth-of-type(7) {
+  bottom: 6rem;
+  left: 0rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-tooth:nth-of-type(8) {
+  bottom: 5rem;
+  left: 4.2rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-tooth:nth-of-type(9) {
+  bottom: 4.5rem;
+  left: 8.4rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-tooth:nth-of-type(10) {
+  bottom: 4.5rem;
+  left: 12.6rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-tooth:nth-of-type(11) {
+  bottom: 5rem;
+  left: 16.8rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-tooth:nth-of-type(12) {
+  bottom: 6rem;
+  left: 21rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .robot-hair-style {
+  position: absolute;
+  top: -6rem;
+  left: 0;
+  /* border: red 1px solid; */
+  width: 50rem;
+  height: 12rem;
+  display: flex;
+}
+
+.robot-hair-one,
+.robot-hair-two,
+.robot-hair-three {
+  position: relative;
+}
+
+.robot-hair-one {
+  top: -5rem;
+  left: 9rem;
+  width: 5rem;
+  height: 12rem;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 115, 0, 1) 0%,
+    rgba(253, 29, 29, 1) 50%
+  );
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.robot-hair-one:nth-of-type(1) {
+  clip-path: polygon(0 0, 43% 0, 100% 100%, 54% 100%);
+  background: linear-gradient(
+    182deg,
+    rgba(255, 115, 0, 1) 0%,
+    rgb(33 34 44) 66%
+  );
+}
+
+.robot-hair-two {
+  top: -3rem;
+  left: 9rem;
+  width: 5rem;
+  height: 9rem;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 112, 3, 1) 0%,
+    rgba(152, 255, 115, 1) 51%,
+    rgba(219, 250, 255, 1) 100%
+  );
+  clip-path: polygon(0 0, 46% 0, 100% 100%, 51% 100%);
+}
+
+.robot-hair-two:nth-of-type(2) {
+  clip-path: polygon(25% 0%, 74% 0, 48% 100%, 0% 100%);
+  background: linear-gradient(to right, #616161, #9bc5c3);
+}
+
+.robot-hair-three {
+  top: -10rem;
+  left: 8rem;
+  width: 13rem;
+  height: 16rem;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  clip-path: polygon(100% 50%, 100% 50%, 50% 100%, 50% 100%, 0 50%, 49% 67%);
 }
